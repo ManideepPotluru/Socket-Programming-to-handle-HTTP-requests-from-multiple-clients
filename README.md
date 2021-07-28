@@ -30,3 +30,14 @@ To test the UDP version, you may replace TCP with UDP
 Test
 
 We did experiments by remote-login the lab computers. We set up the web server at the computer named Brown and set up the clients at the computer named Setebos. We used shell to simulate 100,1000,2000,3000,5000,7000 and 10000 clients requesting the same web page from the server and measured the latency of requests. We ran the tests and measured the average latency from the time client sends the request to the time the client receive using TCP implementation.Then we repeat it using UDP.
+
+The latency graph over TCP of our test results as follow:
+![The latency graph over TCP](https://user-images.githubusercontent.com/33234287/127382284-9f99def5-9ad0-46ae-9947-51043a5da857.png)
+
+The latency graph over UDP of our test results as follow:
+![The latency graph over UDP](https://user-images.githubusercontent.com/33234287/127382317-219fc16c-db14-448b-a3ff-21d368581d38.png)
+
+<img width="601" alt="The loss in packets can be observed in UDP" src="https://user-images.githubusercontent.com/33234287/127382345-8d9a0594-eeeb-40e8-9157-f5a8b82384d2.png">
+The loss in packets can be observed from the other graph while using udp. There`s barely any packet loss while running 10 and 100 clients but for 10,000 clients we can observe a significant loss.
+
+
